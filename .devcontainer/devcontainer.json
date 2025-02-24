@@ -31,19 +31,7 @@
 						"source.organizeImports": "explicit"
 					}
 				},
-				"isort.args":["--profile", "black"],
-				"pylint.args": [
-					"--disable=C0114",
-					"--disable=C0115",
-					"--disable=C0116",
-				],
-				"pylint.cwd": "${workspaceFolder}",
-				"python.testing.pytestArgs": [
-					"--import-mode=importlib",
-					"--rootdir=${workspaceFolder}",
-					"--maxprocesses=1"
-				],
-				"python.envFile": "${workspaceFolder}/.env"
+				"isort.args":["--profile", "black"]
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [

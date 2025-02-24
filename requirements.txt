@@ -6,3 +6,5 @@ langchain-core
 langchain-aws
 langgraph
 langchain-community
+Jinja2
+names_generator
