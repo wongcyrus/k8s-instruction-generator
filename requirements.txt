@@ -6,5 +6,6 @@ langchain-core
 langchain-aws
 langgraph
 langchain-community
+pydantic
 Jinja2
 names_generator
