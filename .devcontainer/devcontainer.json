@@ -1,0 +1,63 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/python:3.12",
+	"features": {
+		"ghcr.io/devcontainers/features/azure-cli:1": {
+			"version": "latest"
+		}
+	},
+	"onCreateCommand": "./create_virtural_env.sh",
+	"hostRequirements": {
+		"cpus": 4
+	},
+	"customizations": {
+		"codespaces": {
+			"openFiles": []
+		},
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/workspaces/k8s-game-generator/venv/bin/python",
+				"python.linting.enabled": true,
+				"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+				"python.linting.flake8Enabled": true,
+				"flake8.args": [
+					"--max-line-length=120"
+				],
+				
+				"python.testing.unittestEnabled": false,
+				"python.testing.pytestEnabled": true,	
+				"pylint.importStrategy": "useBundled",
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.black-formatter",
+					"editor.formatOnSave": true,
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": "explicit"
+					}
+				},
+				"isort.args":["--profile", "black"],
+				"pylint.args": [
+					"--disable=C0114",
+					"--disable=C0115",
+					"--disable=C0116",
+				],
+				"pylint.cwd": "${workspaceFolder}",
+				"python.testing.pytestArgs": [
+					"--import-mode=importlib",
+					"--rootdir=${workspaceFolder}",
+					"--maxprocesses=1"
+				],
+				"python.envFile": "${workspaceFolder}/.env"
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.black-formatter",
+				"ms-python.flake8",
+				"ms-python.pylint",
+				"ms-python.isort",
+				"ms-toolsai.jupyter",
+				"GitHub.copilot"
+			]
+		}
+	}
+}
