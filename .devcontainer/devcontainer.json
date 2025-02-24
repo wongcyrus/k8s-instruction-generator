@@ -1,9 +1,7 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/python:3.12",
 	"features": {
-		"ghcr.io/devcontainers/features/azure-cli:1": {
-			"version": "latest"
-		}
+		"ghcr.io/devcontainers/features/aws-cli:1": {}
 	},
 	"onCreateCommand": "./create_virtural_env.sh",
 	"hostRequirements": {
@@ -15,7 +13,7 @@
 		},
 		"vscode": {
 			"settings": {
-				"python.defaultInterpreterPath": "/workspaces/k8s-game-generator/venv/bin/python",
+				"python.defaultInterpreterPath": "/workspaces/k8s-instruction-generator/venv/bin/python",
 				"python.linting.enabled": true,
 				"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
 				"python.linting.flake8Enabled": true,
