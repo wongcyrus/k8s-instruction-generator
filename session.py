@@ -46,14 +46,20 @@ def get_session_template(game: str, task: str):
 
 
 def get_instruction(game: str, task: str, session: dict):
+    instruction = get_instruction_template(game, task)
+    if instruction:
+        return render(instruction, session)
+    return None
+
+
+def get_instruction_template(game: str, task: str) -> str:
     get_tests()
     instructions_file = f"{TEST_BASE_PATH}/{game}/{task}/instruction.md"
 
     if os.path.exists(instructions_file):
         with open(instructions_file, "r", encoding="utf-8") as file:
-            instruction = file.read()
-        return render(instruction, session)
-    return None
+            return file.read()
+    return ""
 
 
 def random_name(seed: str = "") -> str:
