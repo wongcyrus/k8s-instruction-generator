@@ -12,7 +12,7 @@ aws configure --profile genai
 2. AWS Academy Learner Lab Account
 ```
 aws configure --profile leaner_lab
-aws configure set aws_session_token <Session Token>
+aws configure set aws_session_token <Session Token> --profile leaner_lab
 ```
 
 Set both profile with
