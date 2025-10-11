@@ -172,3 +172,4 @@ cython_debug/
 data/student_email.txt
 output/**
 
+output.zip
